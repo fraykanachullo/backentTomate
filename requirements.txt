@@ -1,0 +1,32 @@
+# Versiones verificadas en venv311 (Python 3.11) - 25/10/2026
+fastapi==0.138.2
+uvicorn[standard]==0.49.0
+python-multipart==0.0.32
+ultralytics==8.4.82
+torch==2.12.1
+torchvision==0.27.1
+opencv-python==4.13.0.92
+pillow==12.2.0
+numpy==2.4.6
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+bcrypt==5.0.0
+email-validator==2.3.0
+pydantic==2.13.4
+pydantic-settings==2.15.0
+python-dotenv==1.2.2
+sqlalchemy[asyncio]==2.0.52
+aiosqlite==0.22.1
+asyncpg==0.31.0
+alembic==1.19.1
+httpx==0.28.1
+
+# Opcionales (el codigo funciona sin ellos, usa alternativas locales):
+# supabase      -> almacenamiento de imagenes en la nube (sin el, se guardan en uploads/)
+# pybreaker     -> circuit breaker de inferencia
+# slowapi       -> rate limiting del login
+# structlog     -> logs estructurados
+
+# Tests
+pytest==9.1.1
+pytest-asyncio==1.4.0
