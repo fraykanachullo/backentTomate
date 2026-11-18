@@ -4,7 +4,7 @@ API FastAPI para detectar enfermedades y plagas del tomate con un modelo YOLOv8n
 
 ## Modelo verificado
 
-El archivo `app/models/best.pt` se carga como detector YOLO y actualmente contiene estas clases, en este orden exacto:
+El archivo `app/models/best.pt` (modelo v6, YOLOv8n semilla 1, versión 4.0.0) se carga como detector YOLO y contiene estas clases, en este orden exacto:
 
 | ID | Clase |
 |---:|---|
@@ -12,7 +12,8 @@ El archivo `app/models/best.pt` se carga como detector YOLO y actualmente contie
 | 1 | `mosca_blanca` |
 | 2 | `oidio` |
 | 3 | `polilla` |
-| 4 | `sana` |
+
+Desde la v6 no existe la clase `sana`: si no hay detecciones, el diagnóstico queda como "sin síntomas detectados" (`has_disease = false`). El modelo anterior de 5 clases (v5) está en el repositorio de investigación (`resultados/v5-1966-completas/`).
 
 El backend comprueba esta correspondencia al iniciar. Si se cambia `best.pt`, también se debe revisar el orden de clases exportado por Roboflow.
 

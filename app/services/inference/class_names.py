@@ -1,6 +1,7 @@
 """
-Diccionario de clases YOLOv8 - 5 clases del dataset Majes.
-Fuente: doc_tecnica 2.2.2 y 4.3
+Diccionario de clases del modelo v6 - 4 clases del dataset Majes (version 3 en Roboflow).
+La clase "sana" se quito del modelo: "sana" solo se usa como etiqueta de resumen cuando
+no hay detecciones (sin sintomas detectados). Su metadato se conserva para el historial.
 """
 
 CLASS_NAMES = {
@@ -8,7 +9,6 @@ CLASS_NAMES = {
     1: "mosca_blanca",
     2: "oidio",
     3: "polilla",
-    4: "sana",
 }
 
 # Reverse map
